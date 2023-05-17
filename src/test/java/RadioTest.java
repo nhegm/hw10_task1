@@ -113,21 +113,21 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNotAddVolumeWhenWhenAbove() {
+    public void shouldNotAddVolumeWhenAbove() {
         Radio volumeTesting = new Radio();
 
-        volumeTesting.setCurrentRadioVolume(100);
-        volumeTesting.incRadioVolumeBy1();
+            volumeTesting.setCurrentRadioVolume(100);
+            volumeTesting.incRadioVolumeBy1();
 
-        int expected = 100;
-        int actual = volumeTesting.getCurrentRadioVolume();
+            int expected = 100;
+            int actual = volumeTesting.getCurrentRadioVolume();
 
         Assertions.assertEquals(expected, actual);
 
     }
 
     @Test
-    public void shouldNotDecreaseVolumeWhenWhenBelow() {
+    public void shouldNotDecreaseVolumeWhenBelow() {
         Radio volumeTesting = new Radio();
 
         volumeTesting.setCurrentRadioVolume(0);
