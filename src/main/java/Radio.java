@@ -34,7 +34,7 @@ public class Radio {
     public void prevRadioStation() {
         getCurrentRadioStationNumber();
         if (currentRadioStationNumber == 0) {
-            currentRadioStationNumber = 9;
+            setCurrentRadioStationNumber(9);
         } else {
             currentRadioStationNumber--;
         }
