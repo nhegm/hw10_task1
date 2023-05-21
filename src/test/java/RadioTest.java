@@ -7,10 +7,7 @@ public class RadioTest {
     public void shouldGetRadioStation() {
         Radio radioTesting = new Radio();
 
-        int expected = 0;
-        int actual = radioTesting.getCurrentRadioStationNumber();
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(0, radioTesting.getCurrentRadioStationNumber());
     }
 
     @Test
@@ -23,6 +20,45 @@ public class RadioTest {
         int actual = radioTesting.getCurrentRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetAmountOfRadioStationsToNewWhenAboveCurrent() {
+        Radio radioTesting = new Radio(15);
+
+        radioTesting.setAmountOfRadioStations(16);
+
+        Assertions.assertEquals(16, radioTesting.getAmountOfRadioStations());
+
+    }
+
+    @Test
+    public void shouldSetAmountOfRadioStationsToNewWhenBelowCurrent() {
+        Radio radioTesting = new Radio(15);
+
+        radioTesting.setAmountOfRadioStations(13);
+
+        Assertions.assertEquals(13, radioTesting.getAmountOfRadioStations());
+
+    }
+
+    @Test
+    public void shouldSetAmountOfRadioStationsToNewWhenAboveDefault() {
+        Radio radioTesting = new Radio();
+
+        radioTesting.setAmountOfRadioStations(15);
+
+        Assertions.assertEquals(15, radioTesting.getAmountOfRadioStations());
+
+    }
+
+    @Test
+    public void shouldNotSetAmountOfRadioStationsWhenBelowDefault() {
+        Radio radioTesting = new Radio(10);
+
+        radioTesting.setAmountOfRadioStations(8);
+
+        Assertions.assertEquals(10, radioTesting.getAmountOfRadioStations());
     }
 
     @Test
@@ -73,6 +109,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSwitchToPrevRadioStation() {
         Radio radioTesting = new Radio();
@@ -141,11 +178,11 @@ public class RadioTest {
     public void shouldNotAddVolumeWhenAbove() {
         Radio volumeTesting = new Radio();
 
-            volumeTesting.setCurrentRadioVolume(100);
-            volumeTesting.incRadioVolumeBy1();
+        volumeTesting.setCurrentRadioVolume(100);
+        volumeTesting.incRadioVolumeBy1();
 
-            int expected = 100;
-            int actual = volumeTesting.getCurrentRadioVolume();
+        int expected = 100;
+        int actual = volumeTesting.getCurrentRadioVolume();
 
         Assertions.assertEquals(expected, actual);
 
