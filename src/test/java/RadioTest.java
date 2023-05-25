@@ -73,6 +73,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSwitchToPrevRadioStation() {
         Radio radioTesting = new Radio();
@@ -141,11 +142,11 @@ public class RadioTest {
     public void shouldNotAddVolumeWhenAbove() {
         Radio volumeTesting = new Radio();
 
-            volumeTesting.setCurrentRadioVolume(100);
-            volumeTesting.incRadioVolumeBy1();
+        volumeTesting.setCurrentRadioVolume(100);
+        volumeTesting.incRadioVolumeBy1();
 
-            int expected = 100;
-            int actual = volumeTesting.getCurrentRadioVolume();
+        int expected = 100;
+        int actual = volumeTesting.getCurrentRadioVolume();
 
         Assertions.assertEquals(expected, actual);
 

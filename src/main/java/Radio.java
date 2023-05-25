@@ -23,7 +23,7 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        getCurrentRadioStationNumber();
+
         if (currentRadioStationNumber == 9) {
             currentRadioStationNumber = 0;
         } else {
@@ -32,7 +32,7 @@ public class Radio {
     }
 
     public void prevRadioStation() {
-        getCurrentRadioStationNumber();
+
         if (currentRadioStationNumber == 0) {
             setCurrentRadioStationNumber(9);
         } else {
@@ -41,7 +41,7 @@ public class Radio {
     }
 
     public void incRadioVolumeBy1() {
-        getCurrentRadioVolume();
+
         if (currentRadioVolume == 100) {
             return;
         } else {
@@ -50,7 +50,7 @@ public class Radio {
     }
 
     public void decRadioVolumeBy1() {
-        getCurrentRadioVolume();
+
         if (currentRadioVolume == 0) {
             return;
         } else {
