@@ -10,6 +10,7 @@ public class Radio {
 
         if (amountOfRadioStations > 10) {
             this.amountOfRadioStations = amountOfRadioStations;
+            this.maxRadioStationNumber = amountOfRadioStations - 1;
         } else {
             this.amountOfRadioStations = 10;
         }

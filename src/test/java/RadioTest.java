@@ -23,6 +23,18 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetRadioStation1() {
+        Radio radioTesting = new Radio(20);
+
+        radioTesting.setCurrentRadioStationNumber(15);
+
+        int expected = 15;
+        int actual = radioTesting.getCurrentRadioStationNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetAmountOfRadioStationsToNewWhenAboveCurrent() {
         Radio radioTesting = new Radio(15);
 
